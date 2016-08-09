@@ -32,9 +32,9 @@ public:
 		for(;x;x/=10)
 		{
 			res = res*10 + x % 10; 
+			if(res > INT_MAX) return 0;
 		}
-		if(res > INT_MAX) return 0;
-
+		
 		if(flag) res = -res;
         return (int)res;
     }
