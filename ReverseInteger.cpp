@@ -25,7 +25,7 @@ public:
 		long long res = 0;
 
 		//int: -2147483648 ~ 2147483647
-		if(x==-2147483648)	return 0;
+		if(x == INT_MIN)	return 0;
 
 		if(x < 0) {x = -x;flag = 1;}
 
@@ -33,10 +33,10 @@ public:
 		{
 			res = res*10 + x % 10; 
 		}
-		if(res > 2147483647) return 0;
+		if(res > INT_MAX) return 0;
 
 		if(flag) res = -res;
-        return res;
+        return (int)res;
     }
 };
 
