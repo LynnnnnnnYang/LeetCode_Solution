@@ -51,9 +51,9 @@ public:
 		s.push_back(sig[base][2]);
 	}
 
-    string intToRoman(int num) 
+	string intToRoman(int num) 
 	{
-        string roman;
+		string roman;
 		int times = num / 1000;
 		for(int i = 0; i < times;i++)
 		{
@@ -67,12 +67,13 @@ public:
 		times = num % 10;
 		convert(roman,times,0);
 		return roman;
-    }
+	}
 };
 
 int IntegerToRoman_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	int n;
 	cin >> n;
@@ -80,5 +81,5 @@ int IntegerToRoman_main()
 	cout<<n<<" convert to: "<<sol.intToRoman(n)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

@@ -20,7 +20,7 @@ using namespace std;
 
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) 
+	int lengthOfLongestSubstring(string s) 
 	{
 		int maxlen = 0;
 		int l = 0;
@@ -38,17 +38,18 @@ public:
 			pos[s[h]] = h;	
 			maxlen = max(maxlen,h-l+1);
 		}
-		return maxlen;        
-    }
+		return maxlen;		
+	}
 };
 
 int LongestSubstring_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string j;cin >> j;
 	cout<<j<<" has longest substring with length: "<<sol.lengthOfLongestSubstring(j)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

@@ -15,7 +15,7 @@ using namespace std;
 
 class Solution {
 public:
-    string longestPalindrome(string s) {
+	string longestPalindrome(string s) {
 		int maxlen = 1, res = 0;
 		int len = s.length();
 		//bool **Is_Palindromic = new bool* [len];
@@ -55,17 +55,18 @@ public:
 		}
 
 		return s.substr(res,maxlen);
-    }
+	}
 };
 
 int LongestPalindromicSubstring_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string str;
 	cin >> str;
 	cout<<str<<" has Longest Palindromic Substring "<<sol.longestPalindrome(str)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

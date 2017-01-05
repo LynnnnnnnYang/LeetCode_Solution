@@ -40,7 +40,7 @@ public:
 	{
 		vector<vector<int>> result;
 		if(nums.size()<4) return result;
-        sort(nums.begin(),nums.end());
+		sort(nums.begin(),nums.end());
 
 		for(int start = 0;start < nums.size() - 4;start++)
 		{
@@ -83,12 +83,13 @@ public:
 			for(;start < nums.size()-4 && nums[start] == nums[start+1];start++);
 		}
 		return result;
-    }
+	}
 };
 
 int FourSum_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	vector<int> num;
 	int n;
@@ -104,5 +105,5 @@ int FourSum_main()
 	print_vector_4(sol.fourSum(num,tar));
 	
 	system("pause");
-    return 0;
+	return 0;
 }

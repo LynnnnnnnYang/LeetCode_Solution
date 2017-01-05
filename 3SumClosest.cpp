@@ -35,17 +35,17 @@ public:
 			while(i < j)
 			{
 				int sum = nums[start] + nums[i] + nums[j];
-                if (abs(sum - target) < dis) {
-                    dis = abs(sum - target);
-                    res = sum;
-                }
-                if (sum == target) {
-                    return target;
-                } else if (sum < target) {
-                    i++;
-                } else {
-                    j--;
-                }		
+				if (abs(sum - target) < dis) {
+					dis = abs(sum - target);
+					res = sum;
+				}
+				if (sum == target) {
+					return target;
+				} else if (sum < target) {
+					i++;
+				} else {
+					j--;
+				}		
 			}
 		}
 		return res;
@@ -53,8 +53,9 @@ public:
 };
 
 int ThreeSumClosest_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	vector<int> num;
 	int n;
@@ -70,5 +71,5 @@ int ThreeSumClosest_main()
 	cout<<"The Closest 3Sum is: "<<sol.threeSumClosest(num,tar)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

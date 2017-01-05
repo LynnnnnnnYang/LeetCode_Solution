@@ -30,12 +30,13 @@ public:
 			else r--;
 		}
 		return maxSize;
-    }
+	}
 };
 
 int ContainerWithMostWater_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	vector<int> h;
 	int n;
@@ -49,5 +50,5 @@ int ContainerWithMostWater_main()
 	cout<<"The max Area is "<<sol.maxArea(h)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

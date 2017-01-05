@@ -28,34 +28,34 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int a = 0, b = 0, car = 0, sum = 0;
+	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+		int a = 0, b = 0, car = 0, sum = 0;
 		
-        ListNode head(-1);
-        ListNode *res = &head;
+		ListNode head(-1);
+		ListNode *res = &head;
 
-        while (l1!=NULL || l2!=NULL){
+		while (l1!=NULL || l2!=NULL){
 			a = 0;b = 0;
 			if( l1!=NULL ){a = l1->val;l1 = l1->next;}
 			if( l2!=NULL ){b = l2->val;l2 = l2->next;}
-            sum = car + a + b;
+			sum = car + a + b;
 
 			res -> next =  new ListNode(sum%10);
 			res = res->next;
-            car = sum/10;
-        }
-        
-        if (car > 0) {
-            res -> next = new ListNode(car%10);
-        }
-        return head.next;
-    }
+			car = sum/10;
+		}
+		
+		if (car > 0) {
+			res -> next = new ListNode(car%10);
+		}
+		return head.next;
+	}
 };
 
 ListNode* int2list(int num)
 {
 	ListNode head(-1);
-    ListNode *res = &head;
+	ListNode *res = &head;
 
 	while(num)
 	{
@@ -76,8 +76,9 @@ void list_print(ListNode *head)
 }
 
 int AddTwoNumbers_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 
 	int i;cin >> i;
 	int j;cin >> j;
@@ -94,5 +95,5 @@ int AddTwoNumbers_main()
 	cout<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

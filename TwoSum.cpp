@@ -21,13 +21,13 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& numbers, int target) 
-    {
-        vector<int> result;
-        map<int,int> mp;
+	vector<int> twoSum(vector<int>& numbers, int target) 
+	{
+		vector<int> result;
+		map<int,int> mp;
 		int pos2 = 0;
-        for(int i = 0; i < numbers.size(); ++i)
-            mp[numbers[i]] = i+1;
+		for(int i = 0; i < numbers.size(); ++i)
+			mp[numbers[i]] = i+1;
 
 		for(int i = 0; i < numbers.size(); ++i)
 		{
@@ -41,12 +41,13 @@ public:
 		}  
 
 		return result;
-    }
+	}
 };
 
 int TwoSum_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	vector <int> nums;
 	int j;cin >> j;
 	while(j != -1)		
@@ -60,5 +61,5 @@ int TwoSum_main()
 	if(two.size()){cout<<two[0]<<" "<<two[1]<<endl;}
 	
 	system("pause");
-    return 0;
+	return 0;
 }

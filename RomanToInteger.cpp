@@ -44,7 +44,7 @@ public:
 	}
 	int romanToInt(string s) 
 	{
-        int pos = 0,res = 0;
+		int pos = 0,res = 0;
 		while(s[pos] == 'M')
 		{
 			pos++;res++;
@@ -54,12 +54,13 @@ public:
 		res += 10 * convert(s,pos,1);
 		res += convert(s,pos,0);
 		return res;
-    }
+	}
 };
 
 int RomanToInteger_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string str;
 	cin >> str;
@@ -67,5 +68,5 @@ int RomanToInteger_main()
 	cout<<str<<" convert to: "<<sol.romanToInt(str)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

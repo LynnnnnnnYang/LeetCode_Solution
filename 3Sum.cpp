@@ -35,10 +35,10 @@ void print_vector(vector<vector<int>> nums)
 
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) 
+	vector<vector<int>> threeSum(vector<int>& nums) 
 	{
 		vector<vector<int>> result;
-        sort(nums.begin(),nums.end());
+		sort(nums.begin(),nums.end());
 
 		if(nums.size()<3) return result;
 
@@ -64,11 +64,11 @@ public:
 				else{
 					if(nums[i] + nums[j] < target)
 					{
-					    for(;i < j && nums[i] == nums[i+1];i++);
+						for(;i < j && nums[i] == nums[i+1];i++);
 						i++;
 					}
 					else{
-					    for(;i < j && nums[j] == nums[j-1];j--);
+						for(;i < j && nums[j] == nums[j-1];j--);
 						j--;
 					}
 				}
@@ -81,8 +81,9 @@ public:
 };
 
 int ThreeSum_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	vector<int> num;
 	int n;
@@ -97,5 +98,5 @@ int ThreeSum_main()
 	print_vector(sol.threeSum(num));
 	
 	system("pause");
-    return 0;
+	return 0;
 }

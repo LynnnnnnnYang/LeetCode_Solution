@@ -59,8 +59,9 @@ public:
 };
 
 int RegularExpressionMatching_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string s,p;
 	cin>>s>>p;
@@ -68,5 +69,5 @@ int RegularExpressionMatching_main()
 	cout<<s<<" is match to "<<p<<" ? "<<sol.isMatch(s,p)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

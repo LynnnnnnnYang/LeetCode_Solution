@@ -18,7 +18,7 @@ public:
 	{
 		if(x<0) return 0;
 
-        int base;
+		int base;
 		for(base=1;x/base>9;base*=10);
 
 		while(x)
@@ -32,8 +32,9 @@ public:
 };
 
 int PalindromeNumber_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	int n;
 	cin >> n;
@@ -41,5 +42,5 @@ int PalindromeNumber_main()
 	cout<<n<<" is Palindrome number? "<<sol.isPalindrome(n)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

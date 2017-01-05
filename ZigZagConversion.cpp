@@ -25,7 +25,7 @@ using namespace std;
 
 class Solution {
 public:
-    string convert(string s, int numRows) 
+	string convert(string s, int numRows) 
 	{
 		string res = "";
 		int pos = 0,cur = 0;
@@ -71,12 +71,13 @@ public:
 		}
 
 		return res;
-    }
+	}
 };
 
 int ZigZagConversion_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string str;
 	int n;
@@ -85,5 +86,5 @@ int ZigZagConversion_main()
 	cout<<str<<" convert to: "<<sol.convert(str,n)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

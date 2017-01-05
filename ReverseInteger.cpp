@@ -19,7 +19,7 @@ using namespace std;
 
 class Solution {
 public:
-    int reverse(int x) 
+	int reverse(int x) 
 	{
 		int flag = 0;
 		long long res = 0;
@@ -31,18 +31,19 @@ public:
 
 		for(;x;x/=10)
 		{
-			res = res*10 + x % 10; 
+			res = res*10 + x % 10;
 			if(res > INT_MAX) return 0;
 		}
-		
+
 		if(flag) res = -res;
-        return (int)res;
-    }
+		return (int)res;
+	}
 };
 
 int ReverseInteger_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	int n;
 	cin >> n;
@@ -50,5 +51,5 @@ int ReverseInteger_main()
 	cout<<n<<" reverse to: "<<sol.reverse(n)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }

@@ -48,7 +48,7 @@ public:
 		}
 	}
 
-    vector<string> letterCombinations(string digits) 
+	vector<string> letterCombinations(string digits) 
 	{
 		vector<string> res;
 		if(digits.length() == 0) return res;
@@ -58,12 +58,13 @@ public:
 		string letter;
 		dfs(digits,pos,letter,res,map);
 		return res;
-    }
+	}
 };
 
 int LetterCombinationsOfAPhoneNumber_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string num;
 	cin >> num;
@@ -72,5 +73,5 @@ int LetterCombinationsOfAPhoneNumber_main()
 	print_vector_str(sol.letterCombinations(num));
 	
 	system("pause");
-    return 0;
+	return 0;
 }

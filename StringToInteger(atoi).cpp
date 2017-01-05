@@ -20,53 +20,54 @@ using namespace std;
 
 class Solution {
 public:
-    int myAtoi(string str) 
+	int myAtoi(string str) 
 	{
 		if (str.length() == 0) return 0;
 		int i;
 		for(i=0;i<str.length()&&str[i]==' ';i++);
 		
 		bool flag = 0;
-        if (str[i]=='+') 
+		if (str[i]=='+') 
 		{
-            i++;
-        } 
+			i++;
+		} 
 		else if (str[i]=='-') 
 		{
-            i++;flag=1;
-        }
+			i++;flag=1;
+		}
 
-        long long int res = 0;
-        for (; i<str.length(); i++) 
+		long long int res = 0;
+		for (; i<str.length(); i++) 
 		{
-            if ('0' <= str[i] && str[i] <= '9') 
+			if ('0' <= str[i] && str[i] <= '9') 
 			{
-                res = res * 10 + (str[i] - '0');
-            } 
+				res = res * 10 + (str[i] - '0');
+			} 
 			else
 			{
-               break;
-            }
+			   break;
+			}
 
 			if(!flag && res > INT_MAX) {res = INT_MAX;break;}
 			if(flag && res > INT_MAX) {res = -INT_MIN;break;}
 		}
 
-        if (flag)
-            res = -res;
+		if (flag)
+			res = -res;
 
 		return (int)res;	
-    }
+	}
 };
 
 int StringToInteger_main()
+//int main()
 {
-    Solution sol;
+	Solution sol;
 	
 	string str;
 	cin >> str;
 	cout<<str<<" is equal to: "<<sol.myAtoi(str)<<endl;
 	
 	system("pause");
-    return 0;
+	return 0;
 }
