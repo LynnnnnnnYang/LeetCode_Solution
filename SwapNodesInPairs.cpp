@@ -40,6 +40,7 @@ void print_list(ListNode* head)
 class Solution {
 public:
 	ListNode* swapPairs(ListNode* head) {
+		// Special Cases
 		if(head == NULL || head->next == NULL) return head;
 
 		// Create a new head for the result List

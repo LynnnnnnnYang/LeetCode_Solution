@@ -25,7 +25,7 @@ public:
 	{
 		int res = 0;
 		
-		//res = 0 - 3 || 5 - 8
+		// case1: res = 0 - 3 || 5 - 8
 		if(s[pos] == sig2[base][1])	{pos++;res = 5;}
 		while(s[pos] == sig2[base][0])
 		{
@@ -33,10 +33,10 @@ public:
 		}
 		if(base!=0 && (s[pos] == sig2[base-1][0] || s[pos] == sig2[base-1][1])) return res;
 
-		//res = 4
+		// case2: res = 4
 		if(res == 1 && s[pos] == sig2[base][1]) {pos++;return 4;}
 
-		//res = 9
+		// case3: res = 9
 		if(res == 1 && s[pos] == sig2[base][2]) {pos++;return 9;}
 
 		return res;

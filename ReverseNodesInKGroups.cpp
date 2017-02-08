@@ -44,6 +44,7 @@ void print_list(ListNode* head)
 class Solution {
 public:
 	ListNode* reverseKGroup(ListNode* head, int k) {
+		// Special Cases
 		if (k <= 1)  return head;
 
 		int num = k;

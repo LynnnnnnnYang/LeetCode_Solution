@@ -17,6 +17,7 @@ class Solution {
 public:
 	string longestCommonPrefix(vector<string>& strs) 
 	{
+		// Special Cases
 		if (strs.size() == 0) return "";
 		
 		// For every character in strs[0]

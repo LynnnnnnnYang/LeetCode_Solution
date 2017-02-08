@@ -17,6 +17,7 @@ using namespace std;
 class Solution {
 public:
 	bool isValid(string s) {
+		// Special Cases
 		if(s.length()==0) return true;
 
 		stack<char> charStack;  

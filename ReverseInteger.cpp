@@ -24,7 +24,8 @@ public:
 		int flag = 0;
 		long long res = 0;
 
-		//int: -2147483648 ~ 2147483647
+		// Special Cases
+		// int: -2147483648 ~ 2147483647
 		if(x == INT_MIN)	return 0;
 
 		if(x < 0) {x = -x;flag = 1;}

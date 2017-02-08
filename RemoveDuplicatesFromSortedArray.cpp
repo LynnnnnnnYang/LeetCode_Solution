@@ -20,7 +20,8 @@
 using namespace std;
 
 void print_vector(const vector<int>& v){
-	for (int i=0; i<v.size();i++){
+	for (int i=0; i<v.size();i++)
+	{
 		cout << v[i] << endl;
 	}
 }
@@ -28,6 +29,7 @@ void print_vector(const vector<int>& v){
 class Solution {
 public:
 	int removeDuplicates(vector<int>& nums) {
+		// Special Cases
 		if(nums.size()<=1) return nums.size();
 
 		int pos = 1;

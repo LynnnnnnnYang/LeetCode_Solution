@@ -16,6 +16,7 @@ class Solution {
 public:
 	bool isPalindrome(int x) 
 	{
+		// Special Cases
 		if(x<0) return 0;
 
 		int base;

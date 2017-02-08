@@ -22,6 +22,7 @@ class Solution {
 public:
 	int myAtoi(string str) 
 	{
+		// Special Cases
 		if (str.length() == 0) return 0;
 		int i;
 		for(i=0;i<str.length()&&str[i]==' ';i++);
